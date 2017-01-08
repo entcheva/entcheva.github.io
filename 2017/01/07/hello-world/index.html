@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | Christina Entcheva&#39;s Technical Blog | Adventures In Coding And Algorithms</title>
+  <title>A Brief Introduction to Algorithms and Big-O Notation | Christina Entcheva&#39;s Technical Blog | Adventures In Coding And Algorithms</title>
 
   
   <meta name="author" content="Christina Entcheva">
   
 
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+  <meta name="description" content="Algorithms are a fundamental part of programming, computer science, and often, job interviews.
+As beginner programmers, algorithms can be daunting, bu">
   
 
   
@@ -22,7 +23,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <meta property="og:title" content="Hello World"/>
+  <meta property="og:title" content="A Brief Introduction to Algorithms and Big-O Notation"/>
 
   <meta property="og:site_name" content="Christina Entcheva&#39;s Technical Blog"/>
 
@@ -63,7 +64,7 @@
 
   
     
-    <h3 class="article-title"><span>Hello World</span></h3>
+    <h3 class="article-title"><span>A Brief Introduction to Algorithms and Big-O Notation</span></h3>
     
   
 
@@ -83,15 +84,60 @@
   <div class="article-content">
     <div class="entry">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>Algorithms are a fundamental part of programming, computer science, and often, job interviews.</p>
+<p>As beginner programmers, algorithms can be daunting, but whether we realize it or not we’re already implementing them in different ways through the decisions we make in our code.</p>
+<p>##What are algorithms?</p>
+<blockquote>
+<p>An algorithm is any repeatable process for finding the solution to a problem.</p>
+</blockquote>
+<p>If you can outline how to get to the solution step-by-step, and if you can replicate those results, you are probably using an algorithm.</p>
+<p>Algorithms in every day life</p>
+<ul>
+<li>A recipe for baking cookies</li>
+<li>Reorganizing your closet</li>
+<li>Your morning routine</li>
+</ul>
+<p><img src="http://christinaentcheva.com/morning-routine.png" alt="Scratch Morning Routine"></p>
+<p>##Why do algorithms matter?</p>
+<p>There are many algorithms, and each one has a different impact on:</p>
+<ul>
+<li>how long your code takes to run</li>
+<li>how much memory it takes to run</li>
+</ul>
+<p>That may not make a huge difference for our code today, but as our applications grow bigger and more complex it becomes increasingly important to assure that we’re writing code that’s efficient - that is, code that’s fast and does not take up a lot of space.</p>
+<p>You can imagine that customers expect the websites, mobile apps, and other applications to load fast and not eat up tons of memory.</p>
+<p>##Algorithm efficiency and space/time complexity</p>
+<p>Algorithm efficiency is measured in time and space complexity.</p>
+<p>Time complexity looks at <em>how long</em> an algorithm takes to solve, and space complexity is concerned with <em>how much memory</em> the algorithm takes to run.</p>
+<p>We usually end up talking more about time complexity, since space is usually more readily available than patience.</p>
+<p>Let’s tackle time complexity through a mathematical framework called Big O notation:</p>
+<p><img src="http://christinaentcheva.com/big-o.jpg" alt="Big-O Notation"></p>
+<p>In simple terms:</p>
+<blockquote>
+<p>“Big O Notation is a way of saying how much time it takes for a mathematical algorithm to run or how much memory it uses.” - Simple English Wikipedia</p>
+</blockquote>
+<p>Three examples and their Big O time complexity:</p>
+<p>1: Look up an element in an array:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">cats = [“Lil Bub”, “Maru”, “Venus&quot;]</div><div class="line">cats[2]</div><div class="line"></div><div class="line">more_cats = [“Garfield”, “Felix”, “Lil Bub”, “Maru”, “Mr. Jinks”,</div><div class="line">             “Venus”, “Nyan Cat”, “Stimpy&quot;]</div><div class="line">more_cats[2]</div></pre></td></tr></table></figure>
+<p><strong>Big O time complexity: O(1) constant</strong><br><em>It takes the same amount of time regardless of input size</em></p>
+<hr>
+<p>2: Iterate over an array:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cats = [&quot;Garfield&quot;, &quot;Felix&quot;, &quot;Lil Bub&quot;, &quot;Maru&quot;, &quot;Mr. Jinks&quot;,</div><div class="line">        &quot;Venus&quot;, &quot;Nyan Cat&quot;, &quot;Stimpy&quot;]</div><div class="line">cats.each do |cat|</div><div class="line">    puts &quot;I&apos;m petting #&#123;cat&#125;&quot;</div><div class="line">end</div></pre></td></tr></table></figure>
+<p><strong>Big O time complexity: O(n) linear</strong><br><em>The time it takes corresponds to the size of the input</em></p>
+<hr>
+<p>3: Binary search on a sorted array:</p>
+<p><img src="http://christinaentcheva.com/binary-search.gif" alt="Binary Search"></p>
+<p><strong>Big O time complexity: O(log n) logarithmic</strong><br><em>The time it takes is divided by half each time</em></p>
+<hr>
+<p>There are many more Big O notation complexities, and tons of algorithms. A handy tool for Big O is the Big O Cheat Sheet.</p>
+<p>Resources:</p>
+<p>Big O Notation, Simple English Wikipedia<br><a href="https://simple.wikipedia.org/wiki/Big_O_notation" target="_blank" rel="external">https://simple.wikipedia.org/wiki/Big_O_notation</a></p>
+<p>Big O Cheat Sheet<br><a href="http://bigocheatsheet.com/" target="_blank" rel="external">http://bigocheatsheet.com/</a></p>
+<p>Girl Develop It, Intro to Algorithms<br><a href="http://www.teaching-materials.org/algorithms/#/" target="_blank" rel="external">http://www.teaching-materials.org/algorithms/#/</a></p>
+<p>CodeNewbie, Episode 103: Algorithms<br><a href="http://www.codenewbie.org/podcast/algorithms" target="_blank" rel="external">http://www.codenewbie.org/podcast/algorithms</a></p>
+<p>Cracking the Coding Interview, Gayle Laakmann McDowell<br><a href="https://www.careercup.com/book" target="_blank" rel="external">https://www.careercup.com/book</a></p>
+<p>The Algorithm Design Manual, Steven Skiena<br><a href="http://www.algorist.com/" target="_blank" rel="external">http://www.algorist.com/</a></p>
+<p>Introduction to Algorithms, CLRS<br><a href="https://mitpress.mit.edu/books/introduction-algorithms" target="_blank" rel="external">https://mitpress.mit.edu/books/introduction-algorithms</a></p>
 
       
     </div>
