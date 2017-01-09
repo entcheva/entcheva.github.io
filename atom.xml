@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Christina Entcheva&#39;s Technical Blog</title>
+  <subtitle>Adventures In Coding And Algorithms</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://entcheva.github.io/"/>
+  <updated>2017-01-09T12:18:29.000Z</updated>
+  <id>http://entcheva.github.io/</id>
+  
+  <author>
+    <name>Christina Entcheva</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Falsehoods Programmers Believe</title>
+    <link href="http://entcheva.github.io/2017/01/09/falsehoods_programmers_believe/"/>
+    <id>http://entcheva.github.io/2017/01/09/falsehoods_programmers_believe/</id>
+    <published>2017-01-09T05:00:00.000Z</published>
+    <updated>2017-01-09T12:18:29.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;I discovered this collection of blog posts: “Falsehoods Programmers Believe” through one of the resources linked in my last blog post. “F
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>A Brief Introduction to Algorithms and Big-O Notation</title>
+    <link href="http://entcheva.github.io/2016/12/15/intro-to-algorithms/"/>
+    <id>http://entcheva.github.io/2016/12/15/intro-to-algorithms/</id>
+    <published>2016-12-15T05:00:00.000Z</published>
+    <updated>2017-01-08T05:22:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Algorithms are a fundamental part of programming, computer science, and often, job interviews. As beginner programmers, algorithms can be
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
