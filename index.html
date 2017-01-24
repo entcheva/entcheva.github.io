@@ -98,12 +98,36 @@
 </ol>
 <h3 id="What-A-Tree-Is-Not"><a href="#What-A-Tree-Is-Not" class="headerlink" title="What A Tree Is Not"></a>What A Tree Is Not</h3><p>What a tree is not: a tree is not a linearly organized data structure, like an array or a linked list. <strong>A data structure is said to be linear if its elements form a sequence.</strong> A hash is also not a linearly organized data structure because its order of return cannot be guaranteed.</p>
 <h3 id="General-vs-Binary-Trees"><a href="#General-vs-Binary-Trees" class="headerlink" title="General vs. Binary Trees"></a>General vs. Binary Trees</h3><p><img src="/images/generalTree.jpg" alt=""><br>A <strong>general tree</strong> is a data structure with nodes. There is no limit on the degree of nodes in a general tree, and each node can have an infinite number of children.</p>
-<p><img src="/images/binaryTree.jpg" alt=""><br>A <strong>binary tree</strong> is a data structure in that each node has at most two nodes: left and right. Nodes in a binary tree cannot have more than degree 2</p>
-<p>A simple unordered tree:<br><img src="/images/tree1.png" alt=""></p>
-<p>Real life examples of trees:<br><img src="/images/tree2.png" alt=""><br><img src="/images/tree3.png" alt=""></p>
-<h2 id="Advantages-Of-Trees"><a href="#Advantages-Of-Trees" class="headerlink" title="Advantages Of Trees"></a>Advantages Of Trees</h2><p>Trees are so useful and frequently used, because they have some very serious advantages:</p>
-<p>Trees reflect structural relationships in the data<br>Trees are used to represent hierarchies<br>Trees provide an efficient insertion and searching<br>Trees are very flexible data, allowing to move subtrees around with minumum effort</p>
-<h2 id="Sources"><a href="#Sources" class="headerlink" title="Sources:"></a>Sources:</h2><p>Binary Trees<br><a href="https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/trees.html" target="_blank" rel="external">https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/trees.html</a></p>
+<p>Real life examples of general trees:<br><img src="/images/tree2.png" alt=""><br><img src="/images/tree3.png" alt=""></p>
+<p><img src="/images/binaryTree.jpg" alt=""><br>A <strong>binary tree</strong> is a data structure in that each node has at most two nodes: left and right.</p>
+<p>Real life examples of binary trees:<br><img src="" alt=""></p>
+<h2 id="Advantages-Of-Trees"><a href="#Advantages-Of-Trees" class="headerlink" title="Advantages Of Trees"></a>Advantages Of Trees</h2><p>Trees are useful and frequently used because they have some advantages:</p>
+<ul>
+<li>Trees <strong>reflect structural relationships</strong> in the data</li>
+<li>Trees are used to <strong>represent hierarchies</strong></li>
+<li>Trees provide an <strong>efficient insertion and searching</strong></li>
+<li>Trees are <strong>very flexible</strong> data, allowing to <strong>move subtrees around with minimum effort</strong></li>
+</ul>
+<h2 id="Techniques-For-Traversing-A-Binary-Tree"><a href="#Techniques-For-Traversing-A-Binary-Tree" class="headerlink" title="Techniques For Traversing A Binary Tree"></a>Techniques For Traversing A Binary Tree</h2><p>Traversing a tree can either take a breadth-first or a depth-first approach.</p>
+<h3 id="Breadth-First-Search"><a href="#Breadth-First-Search" class="headerlink" title="Breadth First Search"></a>Breadth First Search</h3><p>Explores the neighbor nodes first, before moving to the next level neighbors.</p>
+<p><img src="/images/breadthFirst2.gif" alt=""></p>
+<p>There are three different types of depth-first traversals:</p>
+<ul>
+<li>PreOrder traversal - visit the parent first and then left and right children</li>
+<li>InOrder traversal - visit the left child, then the parent and the right child</li>
+<li>PostOrder traversal - visit left child, then the right child and then the parent</li>
+</ul>
+<p><img src="/images/breadthTraversals.bmp" alt=""></p>
+<h3 id="Depth-First-Search"><a href="#Depth-First-Search" class="headerlink" title="Depth First Search"></a>Depth First Search</h3><p>Explores all the children of a neighboring node before moving to the next neighbor and its children.</p>
+<p><img src="/images/depthFirst2.gif" alt=""></p>
+<p>There is only one kind of breadth-first traversal:</p>
+<ul>
+<li>Level order traversal. This traversal visits nodes by levels from <strong>top to bottom and from left to right.</strong></li>
+</ul>
+<h3 id="Example-Implementations-amp-Sources"><a href="#Example-Implementations-amp-Sources" class="headerlink" title="Example Implementations &amp; Sources"></a>Example Implementations &amp; Sources</h3><p>Data Structures With JavaScript: Tree<br><a href="https://code.tutsplus.com/articles/data-structures-with-javascript-tree--cms-23393" target="_blank" rel="external">https://code.tutsplus.com/articles/data-structures-with-javascript-tree--cms-23393</a></p>
+<p>Binary tree - Wikipedia<br><a href="https://en.wikipedia.org/wiki/Binary_tree" target="_blank" rel="external">https://en.wikipedia.org/wiki/Binary_tree</a></p>
+<p>Binary Trees - Carnegie Mellon University<br><a href="https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/trees.html" target="_blank" rel="external">https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/trees.html</a></p>
+<p>Girl Develop It, Intro to Algorithms<br><a href="http://www.teaching-materials.org/algorithms/#/" target="_blank" rel="external">http://www.teaching-materials.org/algorithms/#/</a></p>
 
       
     </div>
