@@ -86,38 +86,31 @@
     <div class="entry">
       
         <p>Algorithms are a fundamental part of programming, computer science, and often, job interviews. As beginner programmers, algorithms can be daunting, but whether we realize it or not we’re already implementing them in different ways through the decisions we make in our code.</p>
-<h2 id="What-are-algorithms"><a href="#What-are-algorithms" class="headerlink" title="What are algorithms?"></a>What are algorithms?</h2><p>An algorithm is any repeatable process for finding the solution to a problem.</p>
-<p>If you can outline how to get to the solution step-by-step, and if you can replicate those results, you are probably using an algorithm.</p>
-<h2 id="Algorithms-in-every-day-life"><a href="#Algorithms-in-every-day-life" class="headerlink" title="Algorithms in every day life"></a>Algorithms in every day life</h2><ul>
+<h2 id="What-are-algorithms"><a href="#What-are-algorithms" class="headerlink" title="What are algorithms?"></a>What are algorithms?</h2><p>An algorithm is any repeatable process for finding the solution to a problem. If you can outline how to get to the solution step-by-step, and if you can replicate those results, you are probably using an algorithm.</p>
+<h2 id="Algorithms-in-every-day-life"><a href="#Algorithms-in-every-day-life" class="headerlink" title="Algorithms in every day life"></a>Algorithms in every day life</h2><p>Algorithms don’t have to be scary - there are many algorithms at play in every-day life. Some basic algorithms include:</p>
+<ul>
 <li>A recipe for baking cookies</li>
 <li>Reorganizing your closet</li>
 <li>Your morning routine</li>
 </ul>
 <p><img src="/images/morning-routine.png" alt="Scratch Morning Routine"></p>
-<h2 id="Why-do-algorithms-matter"><a href="#Why-do-algorithms-matter" class="headerlink" title="Why do algorithms matter?"></a>Why do algorithms matter?</h2><p>There are many algorithms, and each one has a different impact on:</p>
-<ul>
-<li>how long your code takes to run</li>
-<li>how much memory it takes to run</li>
-</ul>
-<p>That may not make a huge difference for our code today, but as our applications grow bigger and more complex it becomes increasingly important to assure that we’re writing code that’s efficient - that is, code that’s fast and does not take up a lot of space.</p>
+<h2 id="Why-do-algorithms-matter"><a href="#Why-do-algorithms-matter" class="headerlink" title="Why do algorithms matter?"></a>Why do algorithms matter?</h2><p>There are many algorithms, and each one has a different impact on how long your code takes to run, and how much memory it takes to run. That may not make a huge difference for our code today, but as our applications grow bigger and more complex it becomes increasingly important to assure that we’re writing code that’s efficient - that is, code that’s fast and does not take up a lot of space.</p>
 <p>You can imagine that customers expect the websites, mobile apps, and other applications to load fast and not eat up tons of memory.</p>
-<h2 id="Algorithm-efficiency-and-space-time-complexity"><a href="#Algorithm-efficiency-and-space-time-complexity" class="headerlink" title="Algorithm efficiency and space/time complexity"></a>Algorithm efficiency and space/time complexity</h2><p>Algorithm efficiency is measured in time and space complexity. Time complexity looks at <em>how long</em> an algorithm takes to solve, and space complexity is concerned with <em>how much memory</em> the algorithm takes to run.</p>
-<p>We usually end up talking more about time complexity, since space is usually more readily available than patience.</p>
+<h2 id="Algorithm-efficiency-and-space-time-complexity"><a href="#Algorithm-efficiency-and-space-time-complexity" class="headerlink" title="Algorithm efficiency and space/time complexity"></a>Algorithm efficiency and space/time complexity</h2><p>Algorithm efficiency is measured in time and space complexity. Time complexity looks at <em>how long</em> an algorithm takes to solve, and space complexity is concerned with <em>how much memory</em> the algorithm takes to run. We usually end up talking more about time complexity, since space is usually more readily available than patience.</p>
 <p>Let’s tackle time complexity through a mathematical framework called Big O notation:</p>
 <p><img src="/images/big-o.jpg" alt="Big-O Notation"></p>
-<p>In simple terms:</p>
-<p><em>“Big O Notation is a way of saying how much time it takes for a mathematical algorithm to run or how much memory it uses.” - Simple English Wikipedia</em></p>
-<h2 id="Three-examples-and-their-Big-O-time-complexity"><a href="#Three-examples-and-their-Big-O-time-complexity" class="headerlink" title="Three examples and their Big O time complexity:"></a>Three examples and their Big O time complexity:</h2><p>1: Look up an element in an array:</p>
+<p>In simple terms, according to Simple English Wikipedia, “Big O Notation is a way of saying how much time it takes for a mathematical algorithm to run or how much memory it uses.”</p>
+<h2 id="Three-examples-and-their-Big-O-time-complexity"><a href="#Three-examples-and-their-Big-O-time-complexity" class="headerlink" title="Three examples and their Big O time complexity:"></a>Three examples and their Big O time complexity:</h2><p>Example 1: Look up an element in an array:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">cats = [“Lil Bub”, “Maru”, “Venus&quot;]</div><div class="line">cats[2]</div><div class="line"></div><div class="line">more_cats = [“Garfield”, “Felix”, “Lil Bub”, “Maru”, “Mr. Jinks”,</div><div class="line">             “Venus”, “Nyan Cat”, “Stimpy&quot;]</div><div class="line">more_cats[2]</div></pre></td></tr></table></figure>
-<p><strong>Big O time complexity: O(1) constant</strong><br><em>It takes the same amount of time regardless of input size</em></p>
+<p>In the above example, the Big O time complexity is <strong>O(1) constant</strong> in that it takes the same amount of time regardless of input size. If the array was twice the size, the time it takes to run would be the same since we are always looking for the second element in the array.</p>
 <hr>
-<p>2: Iterate over an array:</p>
+<p>Example 2: Iterate over an array:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cats = [&quot;Garfield&quot;, &quot;Felix&quot;, &quot;Lil Bub&quot;, &quot;Maru&quot;, &quot;Mr. Jinks&quot;,</div><div class="line">        &quot;Venus&quot;, &quot;Nyan Cat&quot;, &quot;Stimpy&quot;]</div><div class="line">cats.each do |cat|</div><div class="line">    puts &quot;I&apos;m petting #&#123;cat&#125;&quot;</div><div class="line">end</div></pre></td></tr></table></figure>
-<p><strong>Big O time complexity: O(n) linear</strong><br><em>The time it takes corresponds to the size of the input</em></p>
+<p>In the above example, the Big O time complexity is <strong>O(n) linear</strong> in that the time it takes corresponds to the size of the input. If the array was twice the size, the time it takes to run also grows, so it would take twice as long.</p>
 <hr>
-<p>3: Binary search on a sorted array:</p>
+<p>Example 3: Binary search on a sorted array:</p>
 <p><img src="/images/binary-search.gif" alt="Binary Search"></p>
-<p><strong>Big O time complexity: O(log n) logarithmic</strong><br><em>The time it takes is divided by half each time</em></p>
+<p>In the above example, the Big O time complexity is <strong>O(log n) logarithmic</strong> in that the time it takes is divided by half each time*. In this case, the algorithm is actually more efficient over time since the size of the array we have to search is cut in half each time.</p>
 <hr>
 <p>There are many more Big O notation complexities, and tons of algorithms. A handy tool for Big O is the Big O Cheat Sheet, linked below.</p>
 <h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources:"></a>Resources:</h2><p>Big O Notation, Simple English Wikipedia<br><a href="https://simple.wikipedia.org/wiki/Big_O_notation" target="_blank" rel="external">https://simple.wikipedia.org/wiki/Big_O_notation</a></p>
