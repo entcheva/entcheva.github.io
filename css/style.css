@@ -441,7 +441,7 @@ a {
 }
 body {
   background-color: #f7f7f7;
-  font-family: "Roboto", Helvetica, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -508,7 +508,7 @@ header .site-navigation ul li {
 header .site-navigation ul li a {
   display: block;
   color: #000;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   line-height: 2rem;
   padding: 0 1rem;
 }
