@@ -150,7 +150,7 @@
     <div class="entry">
       
         <p>During the <a href="https://www.meetup.com/Flatiron-School-Presents/events/236670613/" target="_blank" rel="external">junior developer panel</a> at Flatiron School, when asked about typical interview questions, one of the panelists mentioned that they were asked to “write a function that gets the depth of a tree.” I hear and read about trees often and I don’t really know what they are, so I thought this was a good opportunity to learn a little bit about trees!</p>
-<h3 id="Trees-in-Cracking-The-Coding-Interview"><a href="#Trees-in-Cracking-The-Coding-Interview" class="headerlink" title="Trees in Cracking The Coding Interview"></a>Trees in <em>Cracking The Coding Interview</em></h3><p>On page 47 (10% into the book) of <em>Cracking the Coding Interview</em>, <a href="https://www.careercup.com/" target="_blank" rel="external">Gayle Laakmann McDowell</a> outlines the “absolute must have basics” of data structures and algorithms to know for an interview:<br><img src="/images/ctci.jpg" width="200"></p>
+<h3 id="Trees-in-Cracking-The-Coding-Interview"><a href="#Trees-in-Cracking-The-Coding-Interview" class="headerlink" title="Trees in Cracking The Coding Interview"></a>Trees in <em>Cracking The Coding Interview</em></h3><p>On page 47 (10% into the book) of <em>Cracking the Coding Interview</em>, <a href="https://www.careercup.com/" target="_blank" rel="external">Gayle Laakmann McDowell</a> outlines the “absolute must have basics” of data structures and algorithms to know for an interview:<br><img src="/images/ctci.jpg"></p>
 <h3 id="Caveats"><a href="#Caveats" class="headerlink" title="Caveats"></a>Caveats</h3><p>I want mention that while this book is really useful and comprehensive, it is seemingly geared toward the “Stanford Big Four” set - kids who graduated from Stanford and are vying to work at Google, Facebook, Apple, or Microsoft. That’s not my lifestyle or what I’m interested in, but in any case it’s a very interesting book, and it’s good to know what Silicon Valley is expecting. As we heard in the junior developer panel, it’s likely that you will be asked CS questions during the interview process.</p>
 <h3 id="Tree-basics"><a href="#Tree-basics" class="headerlink" title="Tree basics"></a>Tree basics</h3><p>As an introduction, my goal for this post is to share:</p>
 <ol>
@@ -159,12 +159,12 @@
 <li>overview of two techniques to traverse a tree</li>
 </ol>
 <h3 id="What-a-tree-is-not"><a href="#What-a-tree-is-not" class="headerlink" title="What a tree is not"></a>What a tree is not</h3><p>A tree is not a linearly organized data structure, like an array or a linked list. A data structure is said to be linear if its elements form a sequence. A hash is also not a linearly organized data structure because its order of return cannot be guaranteed.</p>
-<h3 id="General-trees"><a href="#General-trees" class="headerlink" title="General trees"></a>General trees</h3><p><img src="/images/generalTree.jpg" width="200"></p>
+<h3 id="General-trees"><a href="#General-trees" class="headerlink" title="General trees"></a>General trees</h3><p><img src="/images/generalTree.jpg" width="400"></p>
 <p>A general tree is a data structure with nodes. There is no limit on the degree of nodes in a general tree, and each node can have an infinite number of children.</p>
-<p><img src="/images/basicTree.png" width="200"></p>
-<p>Real life examples of general trees:<br><img src="/images/tree2.png" width="200"><br>The DOM<br><img src="/images/tree3.png" width="200"><br>Phylogenetics (the study of the evolutionary history)</p>
-<h3 id="Binary-trees"><a href="#Binary-trees" class="headerlink" title="Binary trees"></a>Binary trees</h3><p><img src="/images/binaryTree.jpg" width="200"><br>A binary tree is a data structure in that each node has at most two nodes: left and right.</p>
-<p>Real life examples of binary trees:<br><img src="/images/familyTree.png" width="200"><br>Family tree</p>
+<p><img src="/images/basicTree.png" width="400"></p>
+<p>Real life examples of general trees:<br><img src="/images/tree2.png" width="400"><br>The DOM<br><img src="/images/tree3.png" width="400"><br>Phylogenetics (the study of the evolutionary history)</p>
+<h3 id="Binary-trees"><a href="#Binary-trees" class="headerlink" title="Binary trees"></a>Binary trees</h3><p><img src="/images/binaryTree.jpg" width="400"><br>A binary tree is a data structure in that each node has at most two nodes: left and right.</p>
+<p>Real life examples of binary trees:<br><img src="/images/familyTree.png" width="400"><br>Family tree</p>
 <h3 id="Advantages-of-trees"><a href="#Advantages-of-trees" class="headerlink" title="Advantages of trees"></a>Advantages of trees</h3><p>Trees are useful and frequently used because they have some advantages:</p>
 <ul>
 <li>Trees reflect structural relationships in the data</li>
@@ -174,16 +174,16 @@
 </ul>
 <h3 id="Techniques-for-traversing-a-tree"><a href="#Techniques-for-traversing-a-tree" class="headerlink" title="Techniques for traversing a tree"></a>Techniques for traversing a tree</h3><p>Traversing a tree can either take a breadth-first or a depth-first approach.</p>
 <h3 id="Breadth-first-search"><a href="#Breadth-first-search" class="headerlink" title="Breadth first search"></a>Breadth first search</h3><p>Explores the neighbor nodes first, before moving to the next level neighbors.</p>
-<p><img src="/images/breadthFirst2.gif" width="200"></p>
+<p><img src="/images/breadthFirst2.gif" width="400"></p>
 <p>There are three different types of depth-first traversals:</p>
 <ul>
 <li>PreOrder traversal - visit the parent first and then left and right children</li>
 <li>InOrder traversal - visit the left child, then the parent and the right child</li>
 <li>PostOrder traversal - visit left child, then the right child and then the parent</li>
 </ul>
-<p><img src="/images/breadthTraversals.bmp" width="200"></p>
+<p><img src="/images/breadthTraversals.bmp" width="400"></p>
 <h3 id="Depth-first-search"><a href="#Depth-first-search" class="headerlink" title="Depth first search"></a>Depth first search</h3><p>Explores all the children of a neighboring node before moving to the next neighbor and its children.</p>
-<p><img src="/images/depthFirst2.gif" width="200"></p>
+<p><img src="/images/depthFirst2.gif" width="400"></p>
 <p>There is only one kind of breadth-first traversal:</p>
 <ul>
 <li>Level order traversal. This traversal visits nodes by levels from top to bottom and from left to right.</li>
