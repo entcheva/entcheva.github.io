@@ -1,155 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Head tag -->
+<!DOCTYPE HTML>
+<html>
 <head>
+  <meta charset="utf-8">
+  
+  <title>The Tree Data Structure | Christina Entcheva&#39;s Technical Blog | Adventures In Coding And Algorithms</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="author" content="Christina Entcheva">
+  
 
-    <!--Description-->
-    
-        <meta name="description" content="During the junior developer panel at Flatiron School, when asked about typical interview questions, one of the panelists mentioned that they were aske">
-    
+  
+  <meta name="description" content="During the junior developer panel at Flatiron School, when asked about typical interview questions, one of the panelists mentioned that they were aske">
+  
 
-    <!--Author-->
-    
-        <meta name="author" content="Christina Entcheva">
-    
+  
+  
+  <meta name="keywords" content="">
+  
 
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="The Tree Data Structure"/>
-    
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <!--Open Graph Description-->
-    
+  <meta property="og:title" content="The Tree Data Structure"/>
 
-    <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="Christina Entcheva&#39;s Technical Blog"/>
+  <meta property="og:site_name" content="Christina Entcheva&#39;s Technical Blog"/>
 
-    <!--Type page-->
-    
-        <meta property="og:type" content="article" />
-    
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
 
-    <!--Page Cover-->
-    
-
-    <meta name="twitter:card" content="summary" />
-    
-
-    <!-- Title -->
-    
-    <title>The Tree Data Structure - Christina Entcheva&#39;s Technical Blog</title>
-
-    <!-- Tachyons Core CSS -->
-    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
-
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Google Analytics -->
-    
-
-
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Christina Entcheva&#39;s Technical Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 </head>
 
 
 <body>
+<div class="blog">
+  <div class="content">
 
-<!-- Main Content -->
-<!-- Banner -->
-<!-- Banner -->
-<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">Christina Entcheva&#39;s Technical Blog</a>
+    </h1>
+    <p class="site-description">Adventures In Coding And Algorithms</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="http://www.github.com/entcheva">GITHUB</a></li>
+      
+        <li><a href="http://www.linkedin.com/in/centcheva">LINKEDIN</a></li>
+      
+        <li><a href="http://www.twitter.com/christinaent">TWITTER</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
     
-    <nav class="db dt-l w-100 mw8 center border-box pv3">
-        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Christina Entcheva's Technical Blog">
-            <img src="http://christinaentcheva.com/logo.png" class="dib h3" alt="Christina Entcheva's Technical Blog">
-        </a>
-        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/" 
-                    title="Home">
-                    Home
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/archives" 
-                    title="Archives">
-                    Archives
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/about.html" 
-                    title="About">
-                    About
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/contact.html" 
-                    title="Contact">
-                    Contact
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="http://www.github.com/entcheva" 
-                    title="Github">
-                    Github
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="http://www.linkedin.com/in/centcheva" 
-                    title="LinkedIn">
-                    LinkedIn
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="http://www.twitter.com/christinaent" 
-                    title="Twitter">
-                    Twitter
-                </a>
-            
-        </div>
-    </nav>
+    <h3 class="article-title"><span>The Tree Data Structure</span></h3>
+    
+  
 
-    <!-- Title -->
-    <div class="w-100 mw8 center vh-40 dt">
-        <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">The Tree Data Structure</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-01-24</p>
-        </div>
-    </div>
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/01/24/the_tree_data_structure/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-01-24T05:00:00.000Z">
+          2017-01-24
+        </time>
+      </a>
+    </span>
+  </div>
 
-    <!-- Icon -->
-    <div class="relative w-100 mw8 center white dn dn-m db-ns">
-        <i class="header-icon fa fa-file-text-o"></i>
-    </div>
-</div>
 
-<!-- Content -->
-<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
-    <div class="content">
-        <div class="mw8 center">
-            <div class="cf">
-                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
-                    <!-- Tags Vertical -->
-                    
+  
 
-                    <!-- Main Post Content -->
-                    <p>During the <a href="https://www.meetup.com/Flatiron-School-Presents/events/236670613/" target="_blank" rel="external">junior developer panel</a> at Flatiron School, when asked about typical interview questions, one of the panelists mentioned that they were asked to “write a function that gets the depth of a tree.” I hear and read about trees often and I don’t really know what they are, so I thought this was a good opportunity to learn a little bit about trees!</p>
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>During the <a href="https://www.meetup.com/Flatiron-School-Presents/events/236670613/" target="_blank" rel="external">junior developer panel</a> at Flatiron School, when asked about typical interview questions, one of the panelists mentioned that they were asked to “write a function that gets the depth of a tree.” I hear and read about trees often and I don’t really know what they are, so I thought this was a good opportunity to learn a little bit about trees!</p>
 <h3 id="Trees-in-Cracking-The-Coding-Interview"><a href="#Trees-in-Cracking-The-Coding-Interview" class="headerlink" title="Trees in Cracking The Coding Interview"></a>Trees in <em>Cracking The Coding Interview</em></h3><p>On page 47 (10% into the book) of <em>Cracking the Coding Interview</em>, <a href="https://www.careercup.com/" target="_blank" rel="external">Gayle Laakmann McDowell</a> outlines the “absolute must have basics” of data structures and algorithms to know for an interview:<br><img src="/images/ctci.jpg"></p>
 <h3 id="Caveats"><a href="#Caveats" class="headerlink" title="Caveats"></a>Caveats</h3><p>I want mention that while this book is really useful and comprehensive, it is seemingly geared toward the “Stanford Big Four” set - kids who graduated from Stanford and are vying to work at Google, Facebook, Apple, or Microsoft. That’s not my lifestyle or what I’m interested in, but in any case it’s a very interesting book, and it’s good to know what Silicon Valley is expecting. As we heard in the junior developer panel, it’s likely that you will be asked CS questions during the interview process.</p>
 <h3 id="Tree-basics"><a href="#Tree-basics" class="headerlink" title="Tree basics"></a>Tree basics</h3><p>As an introduction, my goal for this post is to share:</p>
@@ -195,136 +131,43 @@
 <p>Girl Develop It, Intro to Algorithms<br><a href="http://www.teaching-materials.org/algorithms/#/" target="_blank" rel="external">http://www.teaching-materials.org/algorithms/#/</a></p>
 <p>The DOM Is A Tree<br><a href="https://learn.co/tracks/web-development-immersive-winter-2016/javascript/the-dom/the-dom-is-a-tree" target="_blank" rel="external">https://learn.co/tracks/web-development-immersive-winter-2016/javascript/the-dom/the-dom-is-a-tree</a></p>
 
-                    
-                    <!-- Tags Bottom -->
-                    
-
-                    <!-- Comments -->
-                    
-
-
-
-                </div>
-                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
-                    
-                    <hr class="dn-l mw4 black-50 mt5" />
-                    
-                    <!-- Widget 1: About -->
-                    <div class="mt5 mt0-l">
-    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
-        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
-            <img src="https://media.licdn.com/media/AAEAAQAAAAAAAAa9AAAAJDJjNTVjMjU3LTkxN2UtNGQ1My1iMWJjLTQwMjk2YTVlYWQwMQ.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Christina Entcheva">
-        </div>
-        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
-            Full-stack web developer with experience in JavaScript, React/Redux, Ruby on Rails, and 5+ years Product Management experience at tech startups, creative and entertainment agencies.
-        </div>
-    </article>
-</div>
-
-                    <hr class="dn-l mw4 black-50 mt5" />
-                    
-                    <!-- Widget 2: Categories -->
-                    
-
-                    <!-- Widget 3: Recent Posts -->
-                    <div class="mt5 tc tl-l">
-    <h3>Recent Posts</h3>
-    
-        <p>
-            <a href="/2017/02/07/refs_react_and_redux/">Refs, React &amp; Redux</a>
-        </p>
-    
-        <p>
-            <a href="/2017/01/24/the_tree_data_structure/">The Tree Data Structure</a>
-        </p>
-    
-        <p>
-            <a href="/2017/01/09/falsehoods_programmers_believe/">Falsehoods Programmers Believe</a>
-        </p>
-    
-        <p>
-            <a href="/2016/12/15/intro-to-algorithms/">A Brief Introduction to Algorithms and Big-O Notat</a>
-        </p>
-    
-</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- Footer -->
-<div class="bg-1 ph2 ph5-ns pv5">
-        <div class="mv8">
-            <div class="center tc">
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://twitter.com/?lang=en" target="_blank">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://www.facebook.com/" target="_blank">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://dribbble.com/" target="_blank">
-                            <i class="fa fa-dribbble"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://github.com/klugjo/hexo-theme-anodyne" target="_blank">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://plus.google.com/" target="_blank">
-                            <i class="fa fa-google-plus"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://www.behance.net/" target="_blank">
-                            <i class="fa fa-behance"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://500px.com/" target="_blank">
-                            <i class="fa fa-500px"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="mailto:test@example.com" target="_blank">
-                            <i class="fa fa-envelope"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
-                            <i class="fa fa-rss"></i>
-                        </a>
-                    </div>
-                
-            </div>
-            <div class="f6 f5-ns center tc white pt5 fw3">
-                @Untitled. All right reserved | Design & Hexo <a class="link dim white" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
-            </div>
-        </div>
+      
     </div>
 
-<!-- After Footer -->
-<!-- Disqus Comments -->
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+  
 
 
 
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    <!-- Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br> -->
+    
+    &copy; 2017 Christina Entcheva
+    
+  </p>
+</footer>
+
+    
+  </div>
+</div>
 </body>
-
 </html>
