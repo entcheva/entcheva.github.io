@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Christina Entcheva&#39;s Technical Blog</title>
-  <subtitle>Adventures In Coding And Algorithms</subtitle>
+  <title>Adventures In Coding And Algorithms</title>
+  
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://entcheva.github.io/"/>
