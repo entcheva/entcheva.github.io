@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://entcheva.github.io/"/>
-  <updated>2017-02-08T05:33:57.000Z</updated>
+  <updated>2017-03-21T20:17:09.000Z</updated>
   <id>http://entcheva.github.io/</id>
   
   <author>
@@ -14,6 +14,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Fun With Ruby on Rails</title>
+    <link href="http://entcheva.github.io/2017/03/05/fun_with_ruby_on_rails/"/>
+    <id>http://entcheva.github.io/2017/03/05/fun_with_ruby_on_rails/</id>
+    <published>2017-03-05T05:00:00.000Z</published>
+    <updated>2017-03-21T20:17:09.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;For the past few months I’ve immersed myself deep into JavaScript/React/Redux world and even turned a bit into a JS fanboy. However, I re
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Refs, React &amp; Redux</title>
