@@ -182,13 +182,16 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>For the past few months I’ve immersed myself deep into JavaScript/React/Redux world and even turned a bit into a JS fanboy. However, I recently had the opportunity to take a break from JS and built a vanilla Rails app and rediscovered the speed, simplicity, and fun of building with Rails. I came across some extra fun Rails methods that I want to share because we all deserve a little more joy in this world.</p>
-<p><strong>Rails method: time_ago_in_words</strong></p>
-<p><strong>Rails method: to_sentence</strong></p>
-<p><strong>Rails relationship: belongs_to in table</strong></p>
-<p><strong>Rails routes: resource vs. resources</strong></p>
-<p><strong>Rails migrations: def up / def down vs. def change</strong></p>
-<p><strong>Rails div_for</strong></p>
+        <p>For the past few months I’ve immersed myself deep into JavaScript/React/Redux world and even turned a bit into a JS fanboy. However, I recently had the opportunity to take a break from JS and built a vanilla Rails app and rediscovered the speed, simplicity, and fun of building with Rails. I came across some extra fun Rails helper methods, tips, and tricks that I want to share because we all deserve a little more joy in this world, amirite?</p>
+<p>###Rails method: time_ago_in_words###<br>The Rails ActionView date helper method <code>time_ago_in_words</code> takes an argument, for example, <code>Time.now</code> and outputs prose saying how long ago that input was. You can use this method to display elapsed time in humanizing language. Some other examples from the <a href="http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-time_ago_in_words" target="_blank" rel="external">documentation</a>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">time_ago_in_words(3.minutes.from_now)                 # =&gt; 3 minutes</div><div class="line">time_ago_in_words(3.minutes.ago)                      # =&gt; 3 minutes</div><div class="line">time_ago_in_words(Time.now - 15.hours)                # =&gt; about 15 hours</div><div class="line">time_ago_in_words(Time.now)                           # =&gt; less than a minute</div><div class="line">time_ago_in_words(Time.now, include_seconds: true) # =&gt; less than 5 seconds</div><div class="line"></div><div class="line">from_time = Time.now - 3.days - 14.minutes - 25.seconds</div><div class="line">time_ago_in_words(from_time)      # =&gt; 3 days</div><div class="line"></div><div class="line">from_time = (3.days + 14.minutes + 25.seconds).ago</div><div class="line">time_ago_in_words(from_time)      # =&gt; 3 days</div></pre></td></tr></table></figure>
+<p>How fun is that?!</p>
+<p>An alias for the <code>time_ago_in_words</code> method is <a href="http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-distance_of_time_in_words_to_now" target="_blank" rel="external"><code>distance_of_time_in_words_to_now</code></a></p>
+<p>###Rails method: to_sentence###</p>
+<p>###Rails relationship: belongs_to in table###</p>
+<p>###Rails routes: resource vs. resources###</p>
+<p>###Rails migrations: def up / def down vs. def change###</p>
+<p>###Rails div_for###</p>
 
       
     </div>
