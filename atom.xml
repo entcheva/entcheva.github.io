@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://entcheva.github.io/"/>
-  <updated>2017-03-22T21:46:12.000Z</updated>
+  <updated>2017-03-22T22:40:20.000Z</updated>
   <id>http://entcheva.github.io/</id>
   
   <author>
@@ -17,14 +17,30 @@
   
   <entry>
     <title>Fun With Ruby on Rails</title>
-    <link href="http://entcheva.github.io/2017/03/05/fun_with_ruby_on_rails/"/>
-    <id>http://entcheva.github.io/2017/03/05/fun_with_ruby_on_rails/</id>
-    <published>2017-03-05T05:00:00.000Z</published>
-    <updated>2017-03-22T21:46:12.000Z</updated>
+    <link href="http://entcheva.github.io/2017/03/12/fun_with_ruby_on_rails/"/>
+    <id>http://entcheva.github.io/2017/03/12/fun_with_ruby_on_rails/</id>
+    <published>2017-03-12T05:00:00.000Z</published>
+    <updated>2017-03-22T22:40:20.000Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;For the past few months I’ve immersed myself deep into JavaScript/React/Redux world and even turned a bit into a JavaScript fanboy. Howev
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>The Absolute Beginner Basics of Getting Set Up With Sass</title>
+    <link href="http://entcheva.github.io/2017/03/05/the_absolute_beginner_basics_of_getting_set_up_with_sass/"/>
+    <id>http://entcheva.github.io/2017/03/05/the_absolute_beginner_basics_of_getting_set_up_with_sass/</id>
+    <published>2017-03-05T05:00:00.000Z</published>
+    <updated>2017-03-22T23:15:14.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;When I was first learning Sass, I experienced a bit of frustration just trying to get started and get my environment set up. This blog po
     
     </summary>
     

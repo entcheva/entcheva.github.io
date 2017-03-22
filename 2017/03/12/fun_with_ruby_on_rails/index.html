@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>fun with ruby on rails | Adventures In Coding &amp; Algorithms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="For the past few months I’ve immersed myself deep into JavaScript/React/Redux world and even turned a bit into a JavaScript fanboy. However, I recently had the opportunity to take a break from JavaScr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fun With Ruby on Rails">
+<meta property="og:url" content="http://entcheva.github.io/2017/03/12/fun_with_ruby_on_rails/index.html">
+<meta property="og:site_name" content="Adventures In Coding & Algorithms">
+<meta property="og:description" content="For the past few months I’ve immersed myself deep into JavaScript/React/Redux world and even turned a bit into a JavaScript fanboy. However, I recently had the opportunity to take a break from JavaScr">
+<meta property="og:updated_time" content="2017-03-22T22:40:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fun With Ruby on Rails">
+<meta name="twitter:description" content="For the past few months I’ve immersed myself deep into JavaScript/React/Redux world and even turned a bit into a JavaScript fanboy. However, I recently had the opportunity to take a break from JavaScr">
+  
+    <link rel="alternate" href="/atom.xml" title="Adventures In Coding &amp; Algorithms" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+
+</head>
+
+<body>
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+
+          <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/favicon.ico">
+              </a>
+            
+
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="http://www.github.com/entcheva">github</a> </li>
+                
+                  <li> <a class="main-nav-link" href="http://www.linkedin.com/in/centcheva">linkedin</a> </li>
+                
+                  <li> <a class="main-nav-link" href="http://www.twitter.com/christinaent">twitter</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-fun_with_ruby_on_rails" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Fun With Ruby on Rails
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/03/12/fun_with_ruby_on_rails/" class="article-date">
+	  <time datetime="2017-03-12T05:00:00.000Z" itemprop="datePublished">03-12-2017</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>For the past few months I’ve immersed myself deep into JavaScript/React/Redux world and even turned a bit into a JavaScript fanboy. However, I recently had the opportunity to take a break from JavaScript and built a vanilla Ruby On Rails app, and I rediscovered the speed, simplicity, and fun of building with Rails. I came across some extra fun Rails helper methods, tips, and tricks and I want to share because we all deserve a little more joy in this world, amirite?</p>
+<h3 id="Rails-helper-time-ago-in-words"><a href="#Rails-helper-time-ago-in-words" class="headerlink" title="Rails helper: time_ago_in_words"></a>Rails helper: <code>time_ago_in_words</code></h3><p>The Rails ActionView date helper <code>time_ago_in_words</code> takes an argument, for example, <code>Time.now</code> and outputs elapsed time since the input in prose. How fun is that?!</p>
+<p>Some examples from the <a href="http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-time_ago_in_words" target="_blank" rel="external">documentation</a>:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">time_ago_in_words(<span class="number">3</span>.minutes.from_now)                 <span class="comment"># =&gt; 3 minutes</span></div><div class="line">time_ago_in_words(<span class="number">3</span>.minutes.ago)                      <span class="comment"># =&gt; 3 minutes</span></div><div class="line">time_ago_in_words(Time.now - <span class="number">15</span>.hours)                <span class="comment"># =&gt; about 15 hours</span></div><div class="line">time_ago_in_words(Time.now)                           <span class="comment"># =&gt; less than a minute</span></div><div class="line">time_ago_in_words(Time.now, <span class="symbol">include_seconds:</span> <span class="literal">true</span>) <span class="comment"># =&gt; less than 5 seconds</span></div><div class="line"></div><div class="line">from_time = Time.now - <span class="number">3</span>.days - <span class="number">14</span>.minutes - <span class="number">25</span>.seconds</div><div class="line">time_ago_in_words(from_time)      <span class="comment"># =&gt; 3 days</span></div><div class="line"></div><div class="line">from_time = (<span class="number">3</span>.days + <span class="number">14</span>.minutes + <span class="number">25</span>.seconds).ago</div><div class="line">time_ago_in_words(from_time)      <span class="comment"># =&gt; 3 days</span></div></pre></td></tr></table></figure>
+<p>An alias for the <code>time_ago_in_words</code> method is <a href="http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-distance_of_time_in_words_to_now" target="_blank" rel="external"><code>distance_of_time_in_words_to_now</code></a>.</p>
+<h3 id="Rails-helper-to-sentence"><a href="#Rails-helper-to-sentence" class="headerlink" title="Rails helper: to_sentence"></a>Rails helper: <code>to_sentence</code></h3><p>The Rails helper <code>to_sentence</code> takes an array and converts it to a comma separated sentence, where the last element is joined by a connector word, for example:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">[].to_sentence                      <span class="comment"># =&gt; ""</span></div><div class="line">[<span class="string">'one'</span>].to_sentence                 <span class="comment"># =&gt; "one"</span></div><div class="line">[<span class="string">'one'</span>, <span class="string">'two'</span>].to_sentence          <span class="comment"># =&gt; "one and two"</span></div><div class="line">[<span class="string">'one'</span>, <span class="string">'two'</span>, <span class="string">'three'</span>].to_sentence <span class="comment"># =&gt; "one, two, and three"</span></div><div class="line"></div><div class="line">[<span class="string">'one'</span>, <span class="string">'two'</span>].to_sentence(<span class="symbol">passing:</span> <span class="string">'invalid option'</span>)</div><div class="line"><span class="comment"># =&gt; ArgumentError: Unknown key :passing</span></div><div class="line"></div><div class="line">[<span class="string">'one'</span>, <span class="string">'two'</span>].to_sentence(<span class="symbol">two_words_connector:</span> <span class="string">'-'</span>)</div><div class="line"><span class="comment"># =&gt; "one-two"</span></div><div class="line"></div><div class="line">[<span class="string">'one'</span>, <span class="string">'two'</span>, <span class="string">'three'</span>].to_sentence(<span class="symbol">words_connector:</span> <span class="string">' or '</span>, <span class="symbol">last_word_connector:</span> <span class="string">' or at least '</span>)</div><div class="line"><span class="comment"># =&gt; "one or two or at least three"</span></div></pre></td></tr></table></figure>
+<p>Joyous! Here’s the <a href="http://api.rubyonrails.org/v4.2/classes/Array.html#method-i-to_sentence" target="_blank" rel="external">documentation</a>.</p>
+<h3 id="Rails-helper-div-for"><a href="#Rails-helper-div-for" class="headerlink" title="Rails helper: div_for"></a>Rails helper: <code>div_for</code></h3><p>The helper <code>div_for</code> works very similarly to <code>form_for</code> but is specifically for divs. <code>Div_for</code> creates a <code>div</code> element with an id and class parameters that reference the specified Active Record object. Particularly useful if you want to iterate through a collection of divs.</p>
+<p>Here’s a quick example:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">div_for</span>(@<span class="attr">article</span>, <span class="attr">class:</span> "<span class="attr">frontpage</span>") <span class="attr">do</span> %&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> @<span class="attr">article.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">end</span> %&gt;</span></div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> With Rails 5, <code>div_for</code> was removed from core Rails and moved to the <a href="https://github.com/rails/record_tag_helper" target="_blank" rel="external">record_tag_helper</a> gem.</p>
+<h3 id="Rails-migrations-t-belongs-to-in-table-migration"><a href="#Rails-migrations-t-belongs-to-in-table-migration" class="headerlink" title="Rails migrations: t.belongs_to in table migration"></a>Rails migrations: <code>t.belongs_to</code> in table migration</h3><p>Did you know that you can include <code>belongs_to</code> in your table migrations?</p>
+<p>By including <code>belongs_to</code> in your migration, the Rails generator knows to add the corresponding <code>belongs_to</code> in the object model.</p>
+<p>In the following example…</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CreateProducts</span> &lt; ActiveRecord::Migration</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">self</span>.<span class="title">up</span></span></div><div class="line">    create_table <span class="symbol">:products</span> <span class="keyword">do</span> <span class="params">|t|</span></div><div class="line">      t.belongs_to <span class="symbol">:category</span></div><div class="line">      t.string <span class="symbol">:name</span></div><div class="line">      t.decimal <span class="symbol">:price</span></div><div class="line">      t.text <span class="symbol">:description</span></div><div class="line">      t.timestamps</div><div class="line">    <span class="keyword">end</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">self</span>.<span class="title">down</span></span></div><div class="line">    drop_table <span class="symbol">:products</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<p>… including <code>t.belongs_to :category</code> produces the corresponding model:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Product</span> &lt; ActiveRecord::Base</span></div><div class="line"> belongs_to <span class="symbol">:category</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<p>Rad.</p>
+<p>Adding <code>belongs_to</code> in your table migrations is also an alias for <code>t.references</code>. Read more about Rails associations <a href="http://guides.rubyonrails.org/association_basics.html" target="_blank" rel="external">here</a>.</p>
+<h3 id="Rails-migrations-def-up-def-down-vs-def-change"><a href="#Rails-migrations-def-up-def-down-vs-def-change" class="headerlink" title="Rails migrations: def up / def down vs. def change"></a>Rails migrations: <code>def up</code> / <code>def down</code> vs. <code>def change</code></h3><p>You may have noticed in the example above that Ryan Bates is using <code>def up</code> and <code>def down</code> vs. <code>def change</code>.</p>
+<p>In most cases, Rails can guess the reverse of your migration, for example, <code>create_table</code> and <code>drop_table</code>, and <code>add_column</code> and <code>remove_column</code>. In those cases, writing your migrations with <code>def change</code> makes sense and Rails will know the reverse and execute it on <code>rails db:rollback</code>. See the <a href="http://edgeguides.rubyonrails.org/active_record_migrations.html#using-the-change-method" target="_blank" rel="external">Rails guide on using the change method</a> for a list of all supported migration definitions.</p>
+<p>However, in cases where Rails can’t automatically match the reverse action, be specific and write separate up and down migration definitions.</p>
+<p>For example, if you wanted to change the precision of a decimal point in your database, Rails couldn’t automatically guess the original precision on rollback, and separate up/down migration definitions are required. Here’s the code:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">AddDetailsToProducts</span> &lt; ActiveRecord::Migration</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">self</span>.<span class="title">up</span></span></div><div class="line">    change_column <span class="symbol">:products</span>, <span class="symbol">:price</span>, <span class="symbol">:decimal</span>, <span class="symbol">precision:</span> <span class="number">10</span>, <span class="symbol">scale:</span> <span class="number">2</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">self</span>.<span class="title">down</span></span></div><div class="line">    change_column <span class="symbol">:products</span>, <span class="symbol">:price</span>, <span class="symbol">:decimal</span>, <span class="symbol">precision:</span> <span class="number">5</span>, <span class="symbol">scale:</span> <span class="number">2</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<h3 id="Rails-routes-resource-vs-resources"><a href="#Rails-routes-resource-vs-resources" class="headerlink" title="Rails routes: resource vs. resources"></a>Rails routes: <code>resource</code> vs. <code>resources</code></h3><p>Lastly, you may have seen routes defined with <code>resources</code>, but there’s also an option called <code>resource</code>. The difference is subtle but an important semantic one that signals to other developers your intent and what they can expect from the application.</p>
+<p>You would use the singular <code>resource</code> to indicate that only a single resource will ever exist, for example a user dashboard.</p>
+<p>Two differences in behavior to note with the singular <code>resource</code>:</p>
+<ol>
+<li><code>resource</code> does not define routes with an <code>id</code>, since a singular resource does not need serialized ids</li>
+<li>singular <code>resource</code>s still map to plural controllers</li>
+</ol>
+<p>Below is an example of routes with a singular <code>resource</code> adapted from the <a href="http://guides.rubyonrails.org/routing.html#singular-resources" target="_blank" rel="external">Rails guide on singular resources</a>:</p>
+<table>
+<thead>
+<tr>
+<th>HTTP Verb</th>
+<th>Path</th>
+<th>Controller#Action</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>/dashboard/new</td>
+<td>dashboards#new</td>
+<td>return an HTML form for creating the dashboard</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/dashboard</td>
+<td>dashboards#create</td>
+<td>create the new dashboard</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/dashboard</td>
+<td>dashboards#show</td>
+<td>display the one and only dashboard resource</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/dashboard/edit</td>
+<td>dashboards#edit</td>
+<td>return an HTML form for editing the dashboard</td>
+</tr>
+<tr>
+<td>PATCH/PUT</td>
+<td>/dashboard</td>
+<td>dashboards#update</td>
+<td>update the one and only dashboard resource</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/dashboard</td>
+<td>dashboards#destroy</td>
+<td>delete the dashboard resource</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2017/03/12/fun_with_ruby_on_rails/" data-title="Fun With Ruby on Rails" data-url="http://entcheva.github.io/2017/03/12/fun_with_ruby_on_rails/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"entcheva"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+
+
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/05/the_absolute_beginner_basics_of_getting_set_up_with_sass/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">The Absolute Beginner Basics of Getting Set Up With Sass</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Rails-helper-time-ago-in-words"><span class="toc-number">1.</span> <span class="toc-text">Rails helper: time_ago_in_words</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rails-helper-to-sentence"><span class="toc-number">2.</span> <span class="toc-text">Rails helper: to_sentence</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rails-helper-div-for"><span class="toc-number">3.</span> <span class="toc-text">Rails helper: div_for</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rails-migrations-t-belongs-to-in-table-migration"><span class="toc-number">4.</span> <span class="toc-text">Rails migrations: t.belongs_to in table migration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rails-migrations-def-up-def-down-vs-def-change"><span class="toc-number">5.</span> <span class="toc-text">Rails migrations: def up / def down vs. def change</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rails-routes-resource-vs-resources"><span class="toc-number">6.</span> <span class="toc-text">Rails routes: resource vs. resources</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      <div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2016 - 2017 Adventures In Coding &amp; Algorithms All Rights Reserved.</p>
+	      <p id="copyRightCn">© Christina Entcheva 2016</p>
+	</div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="http://www.github.com/entcheva" class="mobile-nav-link">Github</a>
+  
+    <a href="http://www.linkedin.com/in/centcheva" class="mobile-nav-link">LinkedIn</a>
+  
+    <a href="http://www.twitter.com/christinaent" class="mobile-nav-link">Twitter</a>
+  
+</nav> -->
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">Set Up</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              Toggle text size
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <!-- <div class="panel-body">
+
+          </div> -->
+        </div>
+
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              Night Mode
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <!-- <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭
+          </div> -->
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            Adventures In Coding &amp; Algorithms
+          </div>
+          <div class="panel-body">
+            Copyright © 2017 Christina Entcheva All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+</body>
+</html>
