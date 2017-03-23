@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://entcheva.github.io/2017/02/07/the_absolute_beginner_basics_of_getting_set_up_with_sass/index.html">
 <meta property="og:site_name" content="Adventures In Coding & Algorithms">
 <meta property="og:description" content="When I was first learning Sass, I experienced a bit of frustration trying to get started and get my environment set up. This blog post is intended for Sass absolute beginners who are looking to get se">
-<meta property="og:updated_time" content="2017-03-23T03:00:07.000Z">
+<meta property="og:updated_time" content="2017-03-23T03:32:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The Absolute Beginner Basics of Getting Set Up With Sass">
 <meta name="twitter:description" content="When I was first learning Sass, I experienced a bit of frustration trying to get started and get my environment set up. This blog post is intended for Sass absolute beginners who are looking to get se">
@@ -176,12 +176,19 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sass --watch style.scss:style.css</div></pre></td></tr></table></figure>
 <p>In the code above, you are telling Sass to watch the file <code>style.scss</code>, which is where you will be writing your Sassy CSS, and to convert it to a file called <code>style.css</code> which will be created the first time a change happens. You do not need to create the <code>style.css</code> file manually.</p>
 <p>And that’s it! Every time you add or make a change to your <code>style.scss</code> file, Sass is watching and knows to update the corresponding file, in this case <code>style.css</code>. If at any time, you want to change the files that are being watched, you can run <code>sass --watch</code> again with the new filenames.</p>
-<p>As your project grows and you amass multiple SCSS files, you will want to set up your <code>sass --watch</code> to watch an entire directory vs. a specific file, but that is a blog post for another time.</p>
+<p>As your project grows and you amass multiple SCSS files, you will want to set up your <code>sass --watch</code> to watch an entire directory vs. a specific file, but that is a blog post for another time. You can also check out <a href="http://sassbreak.com/watch-your-sass/" target="_blank" rel="external">this blog post on Sass Break</a> that goes into more detail about the different ways you can use <code>--watch</code>.</p>
 <h3 id="Writing-your-first-SCSS-code"><a href="#Writing-your-first-SCSS-code" class="headerlink" title="Writing your first SCSS code"></a>Writing your first SCSS code</h3><p>We made it! It’s time to write some Sassy CSS!</p>
-<h3 id="Bonus-Setting-up-folder-structures-for-Sass"><a href="#Bonus-Setting-up-folder-structures-for-Sass" class="headerlink" title="Bonus: Setting up folder structures for Sass"></a>Bonus: Setting up folder structures for Sass</h3><p>I’m just going to touch on this here, but there are a ton of different points of view on how to structure Sass files and folder structures. There are many different ways to break down functionality and folder structures. When I was starting out I got very bogged down and distracted by these points of view and I would say that added to the confusion and blocked me from getting up and running sooner.</p>
-<p>That’s why I’ve decided to keep this post super simple and basic for someone who is just starting out. If you only have one file, you don’t need to read philosophies on ways to structure Sass folder structures.</p>
-<p>If however, you are at the point where you’re looking to break down your CSS into multiple files (and you should, pretty soon after getting up and running), here is some interesting reading on how to structure your Sass project:<br>-<br>-<br>-</p>
-<p>I hope you’ve found this helpful, and feel free to tweet me <a href="https://twitter.com/christinaent" target="_blank" rel="external">@christinaent</a> and let me know your thoughts!</p>
+<h3 id="Bonus-Setting-up-folder-structures-for-Sass"><a href="#Bonus-Setting-up-folder-structures-for-Sass" class="headerlink" title="Bonus: Setting up folder structures for Sass"></a>Bonus: Setting up folder structures for Sass</h3><p>Let me start with the headline for this section: I purposely intended to keep this post super simple and basic for someone who is just starting out. If you only have one file, you don’t need to set up folder structures for your Sass, and you certainly don’t need to read philosophical blog posts on ways to structure you Sass folder structure.</p>
+<p>There are a ton of different points of view on this - there are different ways to break down functionality, folder structures, partials, etc. When I was starting out I got bogged down and distracted by these points of view and I think that added to the confusion and blocked me from getting up and running sooner.</p>
+<p>If however, you’re at the point where you’re looking to break down your CSS into multiple files (and you should, pretty soon after getting up and running), below are some interesting posts on how to structure your Sass project:</p>
+<ul>
+<li><a href="http://sass-lang.com/guide" target="_blank" rel="external">Sass Basics - Sass (official guide)</a></li>
+<li><a href="http://thesassway.com/beginner/how-to-structure-a-sass-project" target="_blank" rel="external">How to structure a Sass project - The Sass Way</a></li>
+<li><a href="https://www.sitepoint.com/architecture-sass-project/" target="_blank" rel="external">Architecture for a Sass Project - Sitepoint (by Hugo Giraudel, a Sass master)</a></li>
+<li><a href="http://vanseodesign.com/css/sass-directory-structures/" target="_blank" rel="external">Sass: Directory Structures That Help You Maintain Your Code - Vanseo Design</a></li>
+<li><a href="https://zurb.com/university/lessons/avoid-a-cluttered-mess-sensible-sass-file-structure" target="_blank" rel="external">Avoid a Cluttered Mess - Sensible Sass file Structure - Zurb Foundation</a></li>
+</ul>
+<p>I hope you’ve found this post helpful, and please feel free to tweet me <a href="https://twitter.com/christinaent" target="_blank" rel="external">@christinaent</a> to let me know your thoughts or share other resources you like!</p>
 
       
     </div>
