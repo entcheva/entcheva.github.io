@@ -3,21 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>archives: 2016 | Adventures In Coding &amp; Algorithms</title>
+  <title>the absolute beginner basics of getting set up with sass | Adventures In Coding &amp; Algorithms</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
-  <meta name="description" content="A Technical Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Adventures In Coding & Algorithms">
-<meta property="og:url" content="http://entcheva.github.io/archives/2016/index.html">
+  <meta name="description" content="When I was first learning Sass, I experienced a bit of frustration trying to get started and get my environment set up. This blog post is intended for Sass absolute beginners who are looking to get se">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Absolute Beginner Basics of Getting Set Up With Sass">
+<meta property="og:url" content="http://entcheva.github.io/2017/02/07/the_absolute_beginner_basics_of_getting_set_up_with_sass/index.html">
 <meta property="og:site_name" content="Adventures In Coding & Algorithms">
-<meta property="og:description" content="A Technical Blog">
+<meta property="og:description" content="When I was first learning Sass, I experienced a bit of frustration trying to get started and get my environment set up. This blog post is intended for Sass absolute beginners who are looking to get se">
+<meta property="og:updated_time" content="2017-03-23T02:24:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Adventures In Coding & Algorithms">
-<meta name="twitter:description" content="A Technical Blog">
+<meta name="twitter:title" content="The Absolute Beginner Basics of Getting Set Up With Sass">
+<meta name="twitter:description" content="When I was first learning Sass, I experienced a bit of frustration trying to get started and get my environment set up. This blog post is intended for Sass absolute beginners who are looking to get se">
   
     <link rel="alternate" href="/atom.xml" title="Adventures In Coding &amp; Algorithms" type="application/atom+xml">
   
@@ -49,8 +50,6 @@
   
 
   
-    <link rel="stylesheet" href="/css/archive.css" >
-  
 
 </head>
 
@@ -75,7 +74,7 @@
             
               <a class="brand" style="
                  margin-top: 0px;"
-                 >
+                href="#" data-toggle="modal" data-target="#myModal" >
                   <img width="124px" height="124px" alt="Hike News" src="/css/images/favicon.ico">
               </a>
             
@@ -140,107 +139,108 @@
             
       <div id="content" class="outer">
         
-          <section id="main">
-  <div class="archives-tags-wrap"><blockquote><span>There are 6 posts so far.</span></blockquote>
-
-
-<!-- 分页显示 -->
-
-	
-	
-		
-		
-		  
-		  
-		  <section class="archives-wrap">
-		    <div class="archive-year-wrap">
-		      <h1><a href="/archives/2016" class="archive-year">2016</a></h1>
-		    </div>
-		    <div class="archives">
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      
-	<a href="/2016/12/15/intro-to-algorithms/" class="archive-article-date">
-	  <time datetime="2016-12-15T05:00:00.000Z" itemprop="datePublished">12-15-2016</time>
-	</a>
-
-      
+          <section id="main" style="float:none;"><article id="post-the_absolute_beginner_basics_of_getting_set_up_with_sass" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2016/12/15/intro-to-algorithms/">A Brief Introduction to Algorithms and Big-O Notation</a>
+    <h1 class="thumb" class="article-title" itemprop="name">
+      The Absolute Beginner Basics of Getting Set Up With Sass
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/02/07/the_absolute_beginner_basics_of_getting_set_up_with_sass/" class="article-date">
+	  <time datetime="2017-02-07T05:00:00.000Z" itemprop="datePublished">02-07-2017</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>When I was first learning Sass, I experienced a bit of frustration trying to get started and get my environment set up. This blog post is intended for Sass absolute beginners who are looking to get set up and write their very first Sassy CSS.</p>
+<h3 id="A-basic-definition-of-Sass"><a href="#A-basic-definition-of-Sass" class="headerlink" title="A basic definition of Sass"></a>A basic definition of Sass</h3><p>Sass stands for Syntactically Awesome Style Sheets, and it is an extension of CSS (Cascading Style Sheets). The latest version of Sass is saved with a <code>.scss</code> extension vs. CSS’s <code>.css</code> extension.</p>
+<p>Sass builds on CSS and provides a ton of extra features to improve efficiency, productivity, and help you and your codebase subscribe to the “don’t repeat yourself” (DRY) principle.</p>
+<h3 id="Installing-Sass-via-command-line"><a href="#Installing-Sass-via-command-line" class="headerlink" title="Installing Sass via command line"></a>Installing Sass via command line</h3><p>Installing Sass via Mac command line is simple. Sass has a Ruby dependency but if you’re on a Mac, you’ve already got Ruby installed! Simply type <code>gem install sass</code> in your command line, or if that doesn’t work, try <code>sudo gem install sass</code>. To confirm that your installation was successful, type <code>sass -v</code> and you should see the current version of Sass that you’ve just installed.</p>
+<p>If you’re having problems, or to install Sass with other operating systems, see the official <a href="http://sass-lang.com/install" target="_blank" rel="external">Install Sass documentation</a>.</p>
+<h3 id="Creating-your-first-Sass-file"><a href="#Creating-your-first-Sass-file" class="headerlink" title="Creating your first Sass file"></a>Creating your first Sass file</h3><p>There are many ways to think about and to structure your Sass files, and I’ll touch on those in a bit, but in order to get started, all you really need is a single <code>.scss</code> file, and you can name it whatever you want. Create a new file with your favorite code editor and give it the file extension <code>.scss</code>.</p>
+<h3 id="When-to-convert-SCSS-files-to-CSS"><a href="#When-to-convert-SCSS-files-to-CSS" class="headerlink" title="When to convert SCSS files to CSS"></a>When to convert SCSS files to CSS</h3><p>Depending on your project setup, you may or may not need to convert your <code>.scss</code> files to <code>.css</code>.</p>
+<p>If you have a <a href="http://rubyonrails.org/" target="_blank" rel="external">Ruby on Rails</a> project, Rails will compile Sass for you so you won’t have to do it manually. Similarly, when using <a href="https://facebook.github.io/react/" target="_blank" rel="external">React</a>, there are packages you can install that will manage your Sass files for you.</p>
+<p>If you are building a project with only HTML, CSS, maybe JavaScript files, and are not using any frameworks or libraries, you will need to compile your Sass files to CSS. Which brings me to…</p>
+<h3 id="How-to-convert-your-SCSS-files-to-CSS"><a href="#How-to-convert-your-SCSS-files-to-CSS" class="headerlink" title="How to convert your SCSS files to CSS"></a>How to convert your SCSS files to CSS</h3><p>To manually compile your Sass to CSS,</p>
+<h3 id="Writing-your-first-SCSS-code"><a href="#Writing-your-first-SCSS-code" class="headerlink" title="Writing your first SCSS code"></a>Writing your first SCSS code</h3><p>Writing your first SCSS code</p>
+<h3 id="Setting-up-folder-structures-for-Sass"><a href="#Setting-up-folder-structures-for-Sass" class="headerlink" title="Setting up folder structures for Sass"></a>Setting up folder structures for Sass</h3>
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2017/02/07/the_absolute_beginner_basics_of_getting_set_up_with_sass/" data-title="The Absolute Beginner Basics of Getting Set Up With Sass" data-url="http://entcheva.github.io/2017/02/07/the_absolute_beginner_basics_of_getting_set_up_with_sass/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"entcheva"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+
+
+      
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/03/05/refs_react_and_redux/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Refs, React &amp; Redux
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/01/24/the_tree_data_structure/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">The Tree Data Structure</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-	
-	
-		</div></section>
-	
 
-	<!-- 页数指示器 -->
-	
+<!-- Table of Contents -->
 
-
-
-
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#A-basic-definition-of-Sass"><span class="toc-number">1.</span> <span class="toc-text">A basic definition of Sass</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Installing-Sass-via-command-line"><span class="toc-number">2.</span> <span class="toc-text">Installing Sass via command line</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Creating-your-first-Sass-file"><span class="toc-number">3.</span> <span class="toc-text">Creating your first Sass file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#When-to-convert-SCSS-files-to-CSS"><span class="toc-number">4.</span> <span class="toc-text">When to convert SCSS files to CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-convert-your-SCSS-files-to-CSS"><span class="toc-number">5.</span> <span class="toc-text">How to convert your SCSS files to CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Writing-your-first-SCSS-code"><span class="toc-number">6.</span> <span class="toc-text">Writing your first SCSS code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setting-up-folder-structures-for-Sass"><span class="toc-number">7.</span> <span class="toc-text">Setting up folder structures for Sass</span></a></li></ol>
+    
+    </div>
+  </aside>
 </section>
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/03/12/fun_with_ruby_on_rails/">Fun With Ruby on Rails</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/05/refs_react_and_redux/">Refs, React &amp; Redux</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/07/the_absolute_beginner_basics_of_getting_set_up_with_sass/">The Absolute Beginner Basics of Getting Set Up With Sass</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/24/the_tree_data_structure/">The Tree Data Structure</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/09/falsehoods_programmers_believe/">Falsehoods Programmers Believe</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-    
-
-  
-</aside>
         
       </div>
       
@@ -327,6 +327,8 @@
 
 
 
+
+  <script src="/js/dialog.js"></script>
 
 
 
