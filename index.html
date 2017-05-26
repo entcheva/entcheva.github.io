@@ -158,6 +158,65 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-observers"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/21/observers/">ActiveRecord::Observers 101</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/21/observers/" class="article-date">
+	  <time datetime="2017-05-21T05:00:00.000Z" itemprop="datePublished">05-21-2017</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><em>“A common side effect of partitioning a system into a collection of cooperating classes is the need to maintain consistency between related objects. You don’t want to achieve consistency by making the classes tightly coupled, because that reduces their reusability.”</em>  </p>
+<p>Design Patterns: Elements of Reusable Object-Oriented Software</p>
+</blockquote>
+<p>Active Record Observers are a great tool for when we want to monitor an event occurence and take action, and especially when that event concerns multiple classes.</p>
+<h3 id="Active-Record-callbacks-vs-ActiveRecord-Observers"><a href="#Active-Record-callbacks-vs-ActiveRecord-Observers" class="headerlink" title="Active Record callbacks vs. ActiveRecord::Observers"></a>Active Record callbacks vs. ActiveRecord::Observers</h3><p>Active Record’s built in callback <a href="http://guides.rubyonrails.org/active_record_callbacks.html#available-callbacks" target="_blank" rel="external">helper methods</a> can easily hook into the object lifecycle to affect change. However, when callbacks affect objects outside the model, we end up violating the single responsibility principle, so we try to avoid them if we can. Using observers brings back single responsibility to models while still allowing us to still hook into the object lifecycle.</p>
+<p>The Observer is a central place outside of the original class to watch for database changes. By extracting that logic outside of the model, we bring back single responsibility and avoid commingling models. Observers only report or take action on a process, and should not affect a process directly.</p>
+<p><a href="http://api.rubyonrails.org/v3.2/classes/ActiveRecord/Observer.html" target="_blank" rel="external">ActiveRecord::Observer</a> is an implementation of the <a href="https://en.wikipedia.org/wiki/Observer_pattern" target="_blank" rel="external">Observer pattern</a>. It was removed from core in Rails 4.0 but is now <a href="https://github.com/rails/rails-observers" target="_blank" rel="external">available as a gem</a>.</p>
+<h5 id="Example-Callbacks"><a href="#Example-Callbacks" class="headerlink" title="Example: Callbacks"></a>Example: Callbacks</h5><p>In the example below, we’re referencing <code>MessageMailer</code> in the <code>User</code> class, increasing the <code>User</code> class’s responsibility:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">class User</div><div class="line">  after_create :notify</div><div class="line"></div><div class="line">  protected</div><div class="line">    def notify</div><div class="line">      MessageMailer.send_welcome_email(self).deliver</div><div class="line">    end</div><div class="line">end</div></pre></td></tr></table></figure>
+<h5 id="Example-Observers"><a href="#Example-Observers" class="headerlink" title="Example: Observers"></a>Example: Observers</h5><p>Alternatively, by using observers in the example below, we extract the <code>MessageMailer</code> logic out of <code>User</code> and put it in its own class, <code>UserObserver</code>, that watches for an event and dispatches an action accordingly:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">class UserObserver &lt; ActiveRecord::Observer</div><div class="line">  def after_create(user)</div><div class="line">    MessageMailer.send_welcome_email(user)</div><div class="line">  end</div><div class="line">end</div></pre></td></tr></table></figure>
+<h5 id="Example-Observing-multiple-classes"><a href="#Example-Observing-multiple-classes" class="headerlink" title="Example: Observing multiple classes"></a>Example: Observing multiple classes</h5><p>Observers are especially helpful in cases like the below where there are multiple models commingled and we want to hook into all of them to watch for some event. We can pull logic out of models where it doesn’t belong, put it in its own separate place, observe actions, and still affect change as needed.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">class AuditObserver &lt; ActiveRecord::Observer</div><div class="line">	observe :account, :balance</div><div class="line"></div><div class="line">	def after_update(record)</div><div class="line">		AuditTrail.new(record, &quot;UPDATED&quot;)</div><div class="line">	end</div><div class="line">end</div></pre></td></tr></table></figure>
+<h3 id="AR-Observers-and-invisibility"><a href="#AR-Observers-and-invisibility" class="headerlink" title="AR::Observers and invisibility"></a>AR::Observers and invisibility</h3><p>One thing to keep in mind with observers is that there is no visible reference to the observer in the observed class. Since we now have unseen side effects that are not readily apparent in our observed class, it can be less clear what’s happening.</p>
+<h3 id="When-to-use-AR-Observers"><a href="#When-to-use-AR-Observers" class="headerlink" title="When to use AR::Observers"></a>When to use AR::Observers</h3><p>Active Record Observers are useful when we want to stay updated on a certain process, and especially when we have multiple classes involved in an event.</p>
+<p>They require very little <a href="https://github.com/rails/rails-observers#installation" target="_blank" rel="external">setup</a>, and since they are Active Record objects, they come rolled up with the functionality of Active Record.</p>
+<h3 id="When-not-to-use-AR-Observers"><a href="#When-not-to-use-AR-Observers" class="headerlink" title="When not to use AR::Observers"></a>When <em>not</em> to use AR::Observers</h3><p>It’s also possible to overuse observers. If there is just one thing that happens, we probably don’t need to use observers.</p>
+<p>For example, in our first code sample where we send a welcome email after a new user is created, the events are probably simple enough that we don’t actually need an observer. The same use case can be handled by extracting a service object like <code>UserNotifier</code>.</p>
+<p>However, if you want mutiple additional actions to take place after the user is created, it may be worth using an observer.</p>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p><a href="https://github.com/rails/rails-observers" target="_blank" rel="external">Rails::Observers</a><br><a href="http://giantrobots.fm/13" target="_blank" rel="external">Giant Robots Smashing Into Other Robots: 13: I’ll disagree in just a little bit</a><br><a href="https://thoughtbot.com/upcase/videos/callbacks" target="_blank" rel="external">Upcase: The Weekly Iteration: Callbacks</a><br><a href="https://www.amazon.com/Design-Patterns-Ruby-Russ-Olsen/dp/0321490452" target="_blank" rel="external">Design Patterns In Ruby</a><br><a href="http://a.co/7iVlVgw" target="_blank" rel="external">Design Patterns: Elements of Reusable Object-Oriented Software</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-fun_with_ruby_on_rails"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     

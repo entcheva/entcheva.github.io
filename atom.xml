@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://entcheva.github.io/"/>
-  <updated>2017-04-10T02:30:14.000Z</updated>
+  <updated>2017-05-26T03:46:45.000Z</updated>
   <id>http://entcheva.github.io/</id>
   
   <author>
@@ -14,6 +14,23 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ActiveRecord::Observers 101</title>
+    <link href="http://entcheva.github.io/2017/05/21/observers/"/>
+    <id>http://entcheva.github.io/2017/05/21/observers/</id>
+    <published>2017-05-21T05:00:00.000Z</published>
+    <updated>2017-05-26T03:46:45.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“A common side effect of partitioning a system into a collection of cooperating classes is the need to maintain consiste
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Fun With Ruby on Rails</title>
